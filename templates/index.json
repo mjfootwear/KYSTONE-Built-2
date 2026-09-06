@@ -9,386 +9,240 @@
  */
 {
   "sections": {
-    "shoppable-hero": {
-      "type": "shoppable-hero",
-      "blocks": {
-        "hotspot-1": {
-          "type": "hotspot",
-          "settings": {
-            "product": "the-riva-tank",
-            "vertical_position": 51,
-            "horizontal_position": 22,
-            "vertical_position_mobile": 50,
-            "horizontal_position_mobile": 50
-          }
-        },
-        "hotspot-2": {
-          "type": "hotspot",
-          "settings": {
-            "product": "the-lena-midi",
-            "vertical_position": 50,
-            "horizontal_position": 57,
-            "vertical_position_mobile": 35,
-            "horizontal_position_mobile": 55
-          }
-        },
-        "hotspot-3": {
-          "type": "hotspot",
-          "settings": {
-            "product": "the-cami",
-            "vertical_position": 73,
-            "horizontal_position": 75,
-            "vertical_position_mobile": 55,
-            "horizontal_position_mobile": 75
-          }
-        }
-      },
-      "block_order": ["hotspot-1", "hotspot-2", "hotspot-3"],
-      "name": "t:kit.labels.shoppable_hero",
-      "settings": {
-        "image": "",
-        "text_protection": 20,
-        "preheading": "",
-        "heading": "Easy by design",
-        "heading_size": "lg",
-        "text": "Soft texture, effortless movement, and warm-weather pieces designed to be worn on repeat.",
-        "button_label": "Shop Linen",
-        "button_link": "",
-        "color_accent": "#ffffff",
-        "text_alignment": "left",
-        "text_position": "bottom-left",
-        "hotspot_style": "plus",
-        "hotspot_color": "#ffffff"
-      }
-    },
-    "featured-collections": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "2026-tops",
-            "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "2026-bottoms",
-            "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "2026-dresses",
-            "title": "",
-            "focal_point": "center center"
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "2026-layers",
-            "title": "",
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": ["collection-1", "collection-2", "collection-3", "collection-4"],
-      "name": "t:sections.featured-collections.presets.collection_list.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "divider": false,
-        "per_row": 4
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.featured_collection.name",
-      "settings": {
-        "title": "All New",
-        "heading_size": "h2",
-        "home_featured_products": "2026-new",
-        "per_row": 5,
-        "rows": 1,
-        "mobile_scrollable": true,
-        "view_all": false,
-        "divider": true
-      }
-    },
-    "promo-grid": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced-1": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "Dresses for every day",
-            "heading_size": "h2",
-            "textarea": "Easy silhouettes for slow mornings, summer dinners, and everything in between.",
-            "cta_text1": "Shop Dresses",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "",
-            "video_url": "",
-            "width": "50",
-            "height": 800,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        },
-        "advanced-2": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "Thoughtful layers",
-            "heading_size": "h2",
-            "textarea": "Soft knits, relaxed tailoring, and lightweight pieces to throw on and go.",
-            "cta_text1": "Shop layers",
-            "cta_link1": "",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "",
-            "video_url": "",
-            "width": "50",
-            "height": 800,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": false,
-            "framed": false
-          }
-        }
-      },
-      "block_order": ["advanced-1", "advanced-2"],
-      "name": "t:sections.promo-grid.presets.promotional_grid.name",
-      "settings": {
-        "full_width": true,
-        "gutter_size": 0,
-        "space_above": false,
-        "space_below": false
-      }
-    },
-    "featured-collection-2": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.featured_collection.name",
-      "settings": {
-        "title": "Everyday Essentials",
-        "heading_size": "h2",
-        "home_featured_products": "2026-the-linen-edit",
-        "per_row": 5,
-        "rows": 1,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "hero-video": {
-      "type": "hero-video",
-      "name": "t:sections.hero-video.presets.video_hero.name",
-      "settings": {
-        "title": "Made to move with ease",
-        "title_size": 60,
-        "subheading": "Quiet texture, warm light, and pieces designed for slower days.",
-        "link_text": "Explore the lookbook",
-        "link": "",
-        "color_accent": "rgba(0,0,0,0)",
-        "text_align": "vertical-center horizontal-center",
-        "video_url": "https://www.youtube.com/watch?v=kAaV5gfdsG0",
-        "overlay_opacity": 0,
-        "section_height": "650px",
-        "mobile_height": "auto"
-      }
-    },
-    "text-and-image": {
-      "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
-      "settings": {
-        "image": "",
-        "image_mask": "none",
-        "image2": "",
-        "image2_mask": "none",
-        "subtitle": "",
-        "title": "",
-        "heading_size": "h2",
-        "text": "<h2>Inside the journal</h2><p>Explore styling ideas, seasonal notes, and content-rich stories that bring our collections to life.</p>",
-        "button_label": "Read more",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "right",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true
-      }
-    },
-    "slideshow": {
+    "hero-exclusive-drop": {
       "type": "slideshow",
       "blocks": {
-        "image-1": {
+        "exclusive-drop-slide": {
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "Easy to wear, easy to return to",
-            "title_size": 64,
-            "subheading": "Soft shapes and understated details for everyday dressing and smaller occasions.",
-            "link": "",
-            "link_text": "Shop dresses",
+            "title": "Exclusive Customs. Made Only Here.",
+            "title_size": 80,
+            "subheading": "Numbered editions. Once they're gone, they're gone.",
+            "link": "/collections/exclusives",
+            "link_text": "See the Drop",
             "link_2": "",
             "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
             "image": "",
+            "image_mobile": "",
             "parallax_direction": "top",
             "overlay_opacity": 20
           }
         }
       },
-      "block_order": ["image-1"],
-      "name": "t:sections.slideshow.presets.hero_optional_slideshow.name",
+      "block_order": ["exclusive-drop-slide"],
+      "name": "Exclusive Customs",
       "settings": {
         "section_height": "650px",
         "mobile_height": "auto",
         "parallax": true,
         "style": "bars",
         "autoplay": true,
-        "autoplay_speed": 5
+        "autoplay_speed": 7
       }
     },
-    "image-grid": {
-      "type": "image-grid",
+    "shop-by-league": {
+      "type": "featured-collections",
       "blocks": {
-        "image-1": {
-          "type": "image",
+        "league-mlb": {
+          "type": "collection",
           "settings": {
-            "link": "",
-            "heading": "The Linen Edit"
+            "collection": "mlb",
+            "title": "",
+            "focal_point": "center center"
           }
         },
-        "image-2": {
-          "type": "image",
+        "league-nfl": {
+          "type": "collection",
           "settings": {
-            "image": "",
-            "link": "",
-            "heading": "Soft Neutrals"
+            "collection": "nfl",
+            "title": "",
+            "focal_point": "center center"
           }
         },
-        "image-3": {
-          "type": "image",
+        "league-nba": {
+          "type": "collection",
           "settings": {
-            "link": "",
-            "heading": "Everyday Dresses"
-          }
-        },
-        "image-4": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "heading": "Thoughtful Layers"
-          }
-        },
-        "image-5": {
-          "type": "image",
-          "settings": {
-            "image": "",
-            "link": "",
-            "heading": "The Lookbook"
-          }
-        },
-        "image-6": {
-          "type": "image",
-          "settings": {
-            "image": "",
-            "link": "",
-            "heading": "Journal"
-          }
-        },
-        "image-7": {
-          "type": "image",
-          "settings": {
-            "image": "",
-            "link": "",
-            "heading": "Gift Guide"
+            "collection": "nba",
+            "title": "",
+            "focal_point": "center center"
           }
         }
       },
-      "block_order": ["image-1", "image-2", "image-3", "image-4", "image-5", "image-6", "image-7"],
-      "name": "t:sections.image-grid.presets.image_grid.name",
+      "block_order": ["league-mlb", "league-nfl", "league-nba"],
+      "name": "Shop by League",
       "settings": {
-        "heading": "",
+        "title": "Shop by League",
         "heading_size": "h2",
-        "text_alignment": "center",
-        "images_per_row": 4,
-        "image_shape": "landscape",
-        "grid_spacing": 30,
-        "full_width": false,
-        "space_above": false,
-        "space_below": false,
-        "divider": true,
-        "overlay_text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "divider": false,
+        "per_row": 3
       }
     },
-    "text-with-icons": {
-      "type": "text-with-icons",
+    "new-arrivals": {
+      "type": "featured-collection",
+      "name": "New Arrivals",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h2",
+        "home_featured_products": "new-arrivals",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "gallery-countdown": {
+      "type": "countdown",
       "blocks": {
-        "text-block-1": {
-          "type": "text_block",
+        "gallery-content": {
+          "type": "content",
           "settings": {
-            "icon": "sparkle",
-            "title": "Quietly considered",
-            "text": "<p>Understated details that bring polish without asking for attention.</p>"
+            "heading": "The Gallery",
+            "heading_size": "h2",
+            "text": "<p>Custom-made New Era hats, produced only for Keystone. Numbered, dated, never restocked.</p>",
+            "content_alignment": "left"
           }
         },
-        "text-block-2": {
-          "type": "text_block",
+        "gallery-button": {
+          "type": "button",
           "settings": {
-            "icon": "cotton",
-            "title": "Texture you can feel",
-            "text": "<p>From airy linen to soft knits, each fabric adds warmth, ease, and depth.</p>"
-          }
-        },
-        "text-block-3": {
-          "type": "text_block",
-          "settings": {
-            "icon": "heart",
-            "title": "Made for repeat wear",
-            "text": "<p>Simple pieces, thoughtful layers, and a wardrobe that feels natural to come back to.</p>"
+            "button_link": "/pages/lookbook",
+            "button": "Enter the Gallery",
+            "button_style": "solid"
           }
         }
       },
-      "block_order": ["text-block-1", "text-block-2", "text-block-3"],
-      "name": "t:common.text_with_icons.presets.text_with_icons.name",
+      "block_order": ["gallery-content", "gallery-button"],
+      "name": "The Gallery",
+      "settings": {
+        "layout": "hero",
+        "full_width": true,
+        "text_color": "#F5F3EF",
+        "background_color": "#0B0B0C"
+      }
+    },
+    "fitted-essentials": {
+      "type": "featured-collection",
+      "name": "Fitted Essentials",
+      "settings": {
+        "title": "Fitted Essentials",
+        "heading_size": "h2",
+        "home_featured_products": "fitted-hats",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "hat-style-promos": {
+      "type": "promo-grid",
+      "blocks": {
+        "snapbacks": {
+          "type": "banner",
+          "settings": {
+            "heading": "Snapbacks",
+            "heading_size": "h3",
+            "text": "",
+            "link": "/collections/snapbacks",
+            "label": "",
+            "image": "",
+            "color_tint_opacity": 0,
+            "framed": false
+          }
+        },
+        "dad-hats": {
+          "type": "banner",
+          "settings": {
+            "heading": "Dad Hats",
+            "heading_size": "h3",
+            "text": "",
+            "link": "/collections/dad-hats",
+            "label": "",
+            "image": "",
+            "color_tint_opacity": 0,
+            "framed": false
+          }
+        },
+        "jerseys": {
+          "type": "banner",
+          "settings": {
+            "heading": "Jerseys",
+            "heading_size": "h3",
+            "text": "",
+            "link": "/collections/jerseys",
+            "label": "",
+            "image": "",
+            "color_tint_opacity": 0,
+            "framed": false
+          }
+        }
+      },
+      "block_order": ["snapbacks", "dad-hats", "jerseys"],
+      "name": "Hat Style Promos",
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true
+      }
+    },
+    "league-logo-list": {
+      "type": "logo-list",
+      "blocks": {},
+      "block_order": [],
+      "name": "League Logo List",
       "settings": {
         "title": "",
         "heading_size": "h2",
-        "align_text": "left",
-        "desktop_columns_per_row": 3,
-        "icon_color": "#ffd5c1",
-        "button_label": "boop",
-        "button_link": "",
-        "divider": true
+        "logo_opacity": 100,
+        "divider": false
+      }
+    },
+    "drop-alerts": {
+      "type": "newsletter",
+      "blocks": {
+        "drop-alerts-title": {
+          "type": "title",
+          "settings": {
+            "title": "Drop Alerts",
+            "heading_size": "h2"
+          }
+        },
+        "drop-alerts-text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>First access to numbered releases. No noise.</p>"
+          }
+        },
+        "drop-alerts-form": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": ["drop-alerts-title", "drop-alerts-text", "drop-alerts-form"],
+      "name": "Drop Alerts",
+      "settings": {
+        "align_text": "center",
+        "image": "",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "top_padding": true,
+        "bottom_padding": true
       }
     }
   },
   "order": [
-    "shoppable-hero",
-    "featured-collections",
-    "featured-collection",
-    "promo-grid",
-    "featured-collection-2",
-    "hero-video",
-    "text-and-image",
-    "slideshow",
-    "image-grid",
-    "text-with-icons"
+    "hero-exclusive-drop",
+    "shop-by-league",
+    "new-arrivals",
+    "gallery-countdown",
+    "fitted-essentials",
+    "hat-style-promos",
+    "league-logo-list",
+    "drop-alerts"
   ]
 }
