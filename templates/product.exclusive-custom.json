@@ -38,6 +38,12 @@
             "inventory_transfers_enable": true
           }
         },
+        "numbered_edition": {
+          "type": "custom",
+          "settings": {
+            "code": "{%- liquid assign edition_number = product.metafields.custom.edition_number.value assign edition_size = product.metafields.custom.edition_size.value assign drop_date = product.metafields.custom.drop_date.value -%}{%- if edition_number != blank and edition_size != blank -%}<div class=\"ks-edition-block\"><span class=\"ks-edition ks-edition--outline\">№ {{ edition_number }} / {{ edition_size }}</span>{%- if drop_date != blank -%}<span class=\"ks-muted\">Released {{ drop_date | date: \"%B %Y\" }}</span>{%- endif -%}</div>{%- endif -%}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -80,6 +86,7 @@
         "variant_picker",
         "price",
         "inventory_status",
+        "numbered_edition",
         "buy_buttons",
         "keystone_sticky_atc",
         "description",
