@@ -46,6 +46,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "keystone_sticky_atc": {
+          "type": "custom",
+          "settings": {
+            "code": "{% render 'keystone-sticky-atc' %}"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -75,6 +81,7 @@
         "price",
         "inventory_status",
         "buy_buttons",
+        "keystone_sticky_atc",
         "description",
         "fit_sizing",
         "shipping_returns"
