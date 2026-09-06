@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap");
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) {
+  background: #0B0B0C;
+  color: #F5F3EF;
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent {
+  --colorBody: #0B0B0C;
+  --colorBodyAlpha05: rgba(11, 11, 12, 0.05);
+  --colorBodyDim: #16161A;
+  --colorBodyLightDim: #16161A;
+  --colorBodyMediumDim: #16161A;
+  --colorBorder: rgba(245, 243, 239, 0.18);
+  --colorBtnPrimary: #F5F3EF;
+  --colorBtnPrimaryLight: #F5F3EF;
+  --colorBtnPrimaryDim: #F5F3EF;
+  --colorBtnPrimaryText: #0B0B0C;
+  --colorLink: #F5F3EF;
+  --colorPrice: #F5F3EF;
+  --colorSaleTag: #D9503C;
+  --colorSaleTagText: #0B0B0C;
+  --colorTextBody: #F5F3EF;
+  --colorTextBodyAlpha015: rgba(245, 243, 239, 0.15);
+  --colorTextBodyAlpha005: rgba(245, 243, 239, 0.05);
+  --colorTextBodyAlpha008: rgba(245, 243, 239, 0.08);
+  --colorTextSavings: #D9503C;
+  --color-body-text: #F5F3EF;
+  --color-body: #0B0B0C;
+  --color-bg: #0B0B0C;
+  background: var(--colorBody);
+  color: var(--colorTextBody);
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) .page-content,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) .main-content {
+  background: var(--colorBody);
+  color: var(--colorTextBody);
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent a:not(.btn) {
+  color: var(--colorLink);
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product-single__meta,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product-block--tab .collapsible-trigger,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product-block--tab .collapsible-content__inner,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .grid-product__content,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .collection-item,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .rte table,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .modal__inner {
+  background-color: var(--colorBodyDim);
+  border-color: var(--colorBorder);
+  color: var(--colorTextBody);
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .grid-product__meta,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .grid-product__title,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product__price,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product__policies,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .rte,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .rte p,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .rte li {
+  color: var(--colorTextBody);
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .product__price-savings,
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .sale-price {
+  color: var(--colorTextSavings);
+}
+
+body.template-suffix-exclusive-custom #MainContent .product-single__title {
+  font-family: "Instrument Serif", var(--typeHeaderPrimary), var(--typeHeaderFallback);
+  font-style: italic;
+  font-weight: 400;
+}
+
+body.template-suffix-lookbook #MainContent h1,
+body.template-suffix-lookbook #MainContent .h1,
+body.template-suffix-lookbook #MainContent .section-header__title {
+  font-family: "Instrument Serif", var(--typeHeaderPrimary), var(--typeHeaderFallback);
+  font-style: italic;
+  font-weight: 400;
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .ks-muted {
+  color: #8E8B85;
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .ks-edition {
+  background-color: #C9A227;
+  border: 1px solid #C9A227;
+  color: #0B0B0C;
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .ks-edition--outline {
+  background-color: transparent;
+  border: 1px solid #C9A227;
+  color: #C9A227;
+}
+
+body:is(.template-suffix-exclusive-custom, .template-suffix-lookbook, .template-suffix-exclusives) #MainContent .ks-scarcity {
+  background-color: #D9503C;
+  border: 1px solid #D9503C;
+  color: #0B0B0C;
+}
