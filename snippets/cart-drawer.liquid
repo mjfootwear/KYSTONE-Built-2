@@ -15,6 +15,7 @@
 
       <div class="drawer__inner">
         <div class="drawer__scrollable">
+          {%- render 'keystone-shipping-bar' -%} {% comment %} Keystone customization: free shipping progress bar. {% endcomment %}
           <div data-products class="appear-animation appear-delay-2"></div>
 
           {% if settings.cart_notes_enable %}

@@ -1,0 +1,172 @@
+{% assign ks_free_ship_threshold = 15000 %} <!-- cents; $150 TODO Jay confirms -->
+{%- liquid
+  assign ks_cart_total = cart.total_price | default: 0
+  assign ks_remaining = ks_free_ship_threshold | minus: ks_cart_total
+  assign ks_progress = ks_cart_total | times: 100 | divided_by: ks_free_ship_threshold
+  if ks_progress > 100
+    assign ks_progress = 100
+  endif
+-%}
+
+<div
+  class="keystone-shipping-bar{% if ks_remaining <= 0 %} is-unlocked{% endif %}"
+  data-keystone-shipping-bar
+  data-threshold="{{ ks_free_ship_threshold }}"
+  data-total="{{ ks_cart_total }}">
+  <div class="keystone-shipping-bar__message" data-keystone-shipping-message>
+    {%- if ks_remaining > 0 -%}
+      You're {{ ks_remaining | money }} from free shipping
+    {%- else -%}
+      Free shipping unlocked
+    {%- endif -%}
+  </div>
+  <div
+    class="keystone-shipping-bar__track"
+    role="progressbar"
+    aria-label="Free shipping progress"
+    aria-valuemin="0"
+    aria-valuemax="{{ ks_free_ship_threshold }}"
+    aria-valuenow="{{ ks_cart_total | at_most: ks_free_ship_threshold }}"
+    data-keystone-shipping-progress>
+    <span class="keystone-shipping-bar__fill" style="width: {{ ks_progress }}%;" data-keystone-shipping-fill></span>
+  </div>
+</div>
+
+<style>
+  .keystone-shipping-bar {
+    background: var(--colorBody);
+    border: 1px solid var(--colorBorder);
+    border-radius: var(--buttonRadius);
+    color: var(--colorTextBody);
+    margin-bottom: 16px;
+    padding: 12px;
+  }
+
+  .drawer .keystone-shipping-bar {
+    background: var(--colorDrawers);
+    border-color: var(--colorDrawerBorder);
+    color: var(--colorDrawerText);
+  }
+
+  .keystone-shipping-bar__message {
+    font-size: var(--typeBodySmallSize);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .keystone-shipping-bar__track {
+    background: var(--colorTextBodyAlpha008);
+    border-radius: var(--buttonRadius);
+    height: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .drawer .keystone-shipping-bar__track {
+    background: var(--colorDrawerBorder);
+  }
+
+  .keystone-shipping-bar__fill {
+    background: var(--colorBtnPrimary);
+    display: block;
+    height: 100%;
+    min-width: 0;
+    transition: width 0.2s ease;
+  }
+
+  .keystone-shipping-bar.is-unlocked .keystone-shipping-bar__message {
+    margin-bottom: 0;
+  }
+
+  .keystone-shipping-bar.is-unlocked .keystone-shipping-bar__track {
+    display: none;
+  }
+</style>
+
+<script>
+  (function() {
+    function formatMoney(cents) {
+      if (window.theme && theme.Currency && theme.settings && theme.settings.moneyFormat) {
+        return theme.Currency.formatMoney(cents, theme.settings.moneyFormat);
+      }
+
+      return '$' + (cents / 100).toFixed(2);
+    }
+
+    function updateBar(bar, cartTotal) {
+      var threshold = parseInt(bar.getAttribute('data-threshold'), 10);
+      var total = typeof cartTotal === 'number' ? cartTotal : parseInt(bar.getAttribute('data-total'), 10);
+      var message = bar.querySelector('[data-keystone-shipping-message]');
+      var progress = bar.querySelector('[data-keystone-shipping-progress]');
+      var fill = bar.querySelector('[data-keystone-shipping-fill]');
+
+      if (!threshold || !message || !progress || !fill) {
+        return;
+      }
+
+      total = isNaN(total) ? 0 : total;
+
+      var remaining = threshold - total;
+      var unlocked = remaining <= 0;
+      var percent = Math.min(Math.max((total / threshold) * 100, 0), 100);
+
+      bar.setAttribute('data-total', total);
+      bar.classList.toggle('is-unlocked', unlocked);
+      message.textContent = unlocked ? 'Free shipping unlocked' : "You're " + formatMoney(remaining) + ' from free shipping';
+      progress.setAttribute('aria-valuenow', Math.min(total, threshold));
+      fill.style.width = percent + '%';
+    }
+
+    function updateAll(cartTotal) {
+      var bars = document.querySelectorAll('[data-keystone-shipping-bar]');
+      for (var i = 0; i < bars.length; i++) {
+        updateBar(bars[i], cartTotal);
+      }
+    }
+
+    function fetchCartAndUpdate() {
+      var cartUrl = window.theme && theme.routes && theme.routes.cart ? theme.routes.cart : '/cart.js';
+
+      fetch(cartUrl, {
+        credentials: 'same-origin',
+        headers: {
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(cartData) {
+          updateAll(cartData.total_price);
+        })
+        .catch(function() {});
+    }
+
+    function init() {
+      updateAll();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+    if (window.keystoneShippingBarEventsReady) {
+      return;
+    }
+
+    window.keystoneShippingBarEventsReady = true;
+
+    document.addEventListener('cart:updated', function(event) {
+      if (event.detail && event.detail.cart && typeof event.detail.cart.total_price === 'number') {
+        updateAll(event.detail.cart.total_price);
+      }
+    });
+
+    document.addEventListener('ajaxProduct:added', fetchCartAndUpdate);
+    document.addEventListener('shopify:section:load', init);
+  })();
+</script>
